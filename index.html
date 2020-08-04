@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="number-input" class="form-control" type="text">
+                    <button id="generate-pin" class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <form action="" name="form">
+                        <input id="number-input1" class="form-control" type="text" value="" name="display">
+
+                        <div class="numbers">
+                            <div class="calc-button-row">
+                                <input type="button" name="btn" value="7" class="btn button" onclick="calculate(this.value)">
+                                <input type="button" name="btn" value="8" class="btn button" onclick="calculate(this.value)">
+                                <input type="button" name="btn" value="9" class="btn button" onclick="calculate(this.value)">
+                            </div>
+                            <div class="calc-button-row"> 
+                                <input type="button" name="btn" value="4" class="btn button" onclick="calculate(this.value)">
+                                <input type="button" name="btn" value="5" class="btn button" onclick="calculate(this.value)">
+                                <input type="button" name="btn" value="6" class="btn button" onclick="calculate(this.value)">
+                            </div>
+                            <div class="calc-button-row">
+                                <input type="button" name="btn" value="1" class="btn button" onclick="calculate(this.value)">
+                                <input type="button" name="btn" value="2" class="btn button" onclick="calculate(this.value)">
+                                <input type="button" name="btn" value="3" class="btn button" onclick="calculate(this.value)">
+                            </div>
+                            <div class="calc-button-row">
+                                <input type="button" name="btn" value="<" class="btn button" onclick="form.display.value = form.display.value.slice(0, -1)">
+                                <input type="button" name="btn" value="0" class="btn button" onclick="calculate(this.value)">
+                                <input type="button" name="btn" value="C" class="btn button" onclick="display.value= null">
+                            </div>
+                            <div>
+                                <button id="submitBtn" type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left"> <span id="total-chance">3</span> try left</p>
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="notify-section">
+            <p class="notify" id="wrong-pin"></p>
+            <p class="notify" id="right-pin"></p>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
